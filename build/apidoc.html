@@ -1,0 +1,171 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/sindresorhus/plur"
+
+    >plur (v2.1.2)</a>
+</h1>
+<h4>Pluralize a word</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plur">module plur</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plur.plur">
+            function <span class="apidocSignatureSpan"></span>plur
+            <span class="apidocSignatureSpan">(str, plural, count)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plur.toString">
+            function <span class="apidocSignatureSpan">plur.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.plur.toString">module plur.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.plur.toString.toString">
+            function <span class="apidocSignatureSpan">plur.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plur" id="apidoc.module.plur">module plur</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plur.plur" id="apidoc.element.plur.plur">
+        function <span class="apidocSignatureSpan"></span>plur
+        <span class="apidocSignatureSpan">(str, plural, count)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">plur = function (str, plural, count) {
+	if (typeof plural === &#x27;number&#x27;) {
+		count = plural;
+	}
+
+	if (str in irregularPlurals) {
+		plural = irregularPlurals[str];
+	} else if (typeof plural !== &#x27;string&#x27;) {
+		plural = (str.replace(/(?:s|x|z|ch|sh)$/i, &#x27;$&#x26;e&#x27;).replace(/([^aeiou])y$/i, &#x27;$1ie&#x27;) + &#x27;s&#x27;)
+			.replace(/i?e?s$/i, function (m) {
+				var isTailLowerCase = str.slice(-1) === str.slice(-1).toLowerCase();
+				return isTailLowerCase ? m.toLowerCase() : m.toUpperCase();
+			});
+	}
+
+	return count === 1 ? str : plural;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.plur.toString" id="apidoc.element.plur.toString">
+        function <span class="apidocSignatureSpan">plur.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.plur.toString" id="apidoc.module.plur.toString">module plur.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.plur.toString.toString" id="apidoc.element.plur.toString.toString">
+        function <span class="apidocSignatureSpan">plur.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
