@@ -1,4 +1,7 @@
-# api documentation for  [plur (v2.1.2)](https://github.com/sindresorhus/plur)  [![npm package](https://img.shields.io/npm/v/npmdoc-plur.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-plur) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-plur.svg)](https://travis-ci.org/npmdoc/node-npmdoc-plur)
+# npmdoc-plur
+
+#### basic api documentation for  [plur (v2.1.2)](https://github.com/sindresorhus/plur)  [![npm package](https://img.shields.io/npm/v/npmdoc-plur.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-plur) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-plur.svg)](https://travis-ci.org/npmdoc/node-npmdoc-plur)
+
 #### Pluralize a word
 
 [![NPM](https://nodei.co/npm/plur.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/plur)
@@ -75,7 +78,8 @@
     "scripts": {
         "test": "xo && ava"
     },
-    "version": "2.1.2"
+    "version": "2.1.2",
+    "bin": {}
 }
 ```
 
